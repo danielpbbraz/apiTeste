@@ -1,0 +1,114 @@
+{
+	"info": {
+		"_postman_id": "7d31c161-45f1-4fcb-b9e2-0f9169643460",
+		"name": "API Distribuição de Recursos",
+		"description": "Coleção do Postman para a API de Distribuição de Recursos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15165134"
+	},
+	"item": [
+		{
+			"name": "Obter Distribuição",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/api_distribuicao_recursos.php/distribuicao",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api_distribuicao_recursos.php",
+						"distribuicao"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Distribuir Recurso",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"clube\": \"Clube A\",\n    \"recurso\": \"Aluguel\",\n    \"quantidade\": 1\n}"
+				},
+				"url": {
+					"raw": "http://localhost/api_distribuicao_recursos.php/distribuicao",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api_distribuicao_recursos.php",
+						"distribuicao"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Adicionar Clube",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nomeClube\": \"Clube C\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost/api_distribuicao_recursos.php/adicionarClube",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api_distribuicao_recursos.php",
+						"adicionarClube"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Adicionar Recurso",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nomeRecurso\": \"Passagem de Trem\",\n    \"valorRecurso\": 15000\n}"
+				},
+				"url": {
+					"raw": "http://localhost/api_distribuicao_recursos.php/adicionarRecurso",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api_distribuicao_recursos.php",
+						"adicionarRecurso"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
